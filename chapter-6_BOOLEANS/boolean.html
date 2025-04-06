@@ -6,6 +6,8 @@
 
     <body>
         <script>
+
+            
             console.log(typeof true);
             true
             false
@@ -55,6 +57,90 @@
             console.log(!true);                     // NOT OPERATOR
 
             console.log(!false);                    // NOT OPERATOR
+
+            
+
+            
+
+            if (1) {
+                console.log('truthy');
+            }                                       // TRUTHY VALUES
+
+            if (0) {
+                console.log('truthy');               // FALSY VALUE (0 , '', NaN, undefined, null,false )
+            }
+
+            if ('') {
+                console.log('truthy');
+            }
+
+            if (false) {
+                console.log('truthy');
+            }
+
+            console.log('text'/5);                  // NaN occurs when we do invalid math operation
+
+            if ('text'/5) {
+                console.log('truthy')
+            }
+
+            let variable1;                          // undefined variable
+
+            if (variable1) {
+                console.log('truthy')
+            }
+
+
+
+            const cartQuantity = 1;                 // application of truethy
+
+            if (cartQuantity){
+                console.log('Cart has Product');
+            }
+
+            
+
+
+            //shortcuts for If statements
+
+            // ternary operator
+            true ? 'truthy' : 'falsy' /* it is a shortcut  for this  
+                                    if(true){
+                                        'truthy'
+                                        }
+                                        else{
+                                        'falsy'}
+                                        */
+
+            const result = true ? 'truthy' : 'falsy'
+            console.log(result);
+            console.log(typeof result);
+
+
+            //Gaurd operator &&
+            
+        true &&  console.log('hello');    /* this is shortcut for if statement like this 
+                                            if (condition) {
+                                            console.log('hello');
+                                            }
+                                            */
+        const message = false && 'hello';
+        console.log(message);
+
+
+            // OR OPERATOR ||
+
+        const currency1 = 'EUR'  || 'USD' ;  /* this is shortcut for if statement like this 
+                                            let currency;
+
+                                            if (!condition) {
+                                            currency = 'USD';
+                                            }
+                                            */
+        console.log(currency1);
+
+        const currency2 = undefined || 'USD' ;
+        console.log(currency2);
 
         </script>
     </body>
