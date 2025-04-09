@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chapter 6 Exercise i</title>
+    </head>
+
+    <body>
+        <script>
+            let randomNum = Math.random();
+            console.log(randomNum);
+            let computer;
+            let guess = 'Heads';
+
+            if(randomNum >= (0) && randomNum <=(1/2)){
+                
+                computer = 'Heads';
+            }
+            else if(randomNum >(1/2) && randomNum <=(1)){
+                
+                computer = 'Tails';
+
+            }
+            console.log(`Your choice is ${guess}.`)
+            console.log(`The Computer Choice is ${computer}.`);
+
+            if(guess==computer){
+                console.log('You Win');
+            }
+            else{
+                console.log('You Losed');
+            }
+
+            
+
+
+        </script>
+    </body>
+</html>
