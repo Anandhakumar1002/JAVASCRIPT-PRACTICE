@@ -6,12 +6,43 @@
 
     <body>
         <script>
+
+            /*
             function function1(){
                 console.log('hello');
                 console.log(2+2);
             }
             function1();
             function1();
+
+            */
+
+            function calculateTax(){                // no parameter assigned
+                console.log(1000*0.1);
+            }
+
+            calculateTax();
+
+            function calculateTax1(cents){           // parameter assigned
+                console.log(cents*0.1);
+            }
+
+            calculateTax1(100);
+            calculateTax1(10000);
+
+            function calculateTax2(cents,tax){         // 2 parameter assigned 
+                console.log(cents*tax);
+            }
+
+            calculateTax2(5000,0.5);
+
+            function calculateTax2(cents,tax=0.1){      // default value for parameter is given
+                console.log(cents*tax);
+            }
+
+            calculateTax2(5000);
+
+
         </script>
     </body>
 </html>
