@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7 Exercise g </title>
+</head>
+<body>
+    <script>
+        function convertLength(length,from,to){
+            if (from=='km' && to=='miles'){
+                const miles = length/1.6;
+                console.log(`No of miles for the ${length} km is ${miles} miles`);
+            }
+
+            else if (from=='miles' && to=='km'){
+                const km = length*1.6;
+                console.log(`No of miles for the ${length} km is ${km} miles`);
+            }
+        }
+
+
+        convertLength(2500,'km','miles')
+
+    </script>
+</body>
+</html>

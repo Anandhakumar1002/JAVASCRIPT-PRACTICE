@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7 Exercise h </title>
+</head>
+<body>
+    <script>
+         function convertLength(length,from,to){
+            if (from=='km' && to=='miles'){
+                const miles = length/1.6;
+                console.log(`No of miles for the ${length} km is ${miles} miles`);
+            }
+
+            else if (from=='miles' && to=='km'){
+                const km = length*1.6;
+                console.log(`No of miles for the ${length} km is ${km} miles`);
+            }
+
+            else if (from=='miles' && to =='ft'){
+                const ft = length*5280;
+                console.log(`No of miles for the ${length} miles is ${ft} ft`);
+            }
+
+            else if (from=='km' && to=='ft'){
+                const ft = length*3280.84;
+                console.log(`No of miles for the ${length} km is ${ft} ft`);
+            }
+
+            else if (from=='ft' && to=='km'){
+                const km = length/3280.84;
+                console.log(`No of miles for the ${length} ft is ${km} km`);
+            }
+
+            else if (from=='ft' && to =='miles'){
+                const miles = length/5280;
+                console.log(`No of miles for the ${length} ft is ${miles} miles`);
+            }
+
+            else if(from==to){
+                console.log(`${length}${to}`);
+            }
+
+
+        }
+
+        convertLength(6000,'ft','km');
+        convertLength(7950,'km','ft');
+        convertLength(7000,'km','km');
+    </script>
+</body>
+</html>
