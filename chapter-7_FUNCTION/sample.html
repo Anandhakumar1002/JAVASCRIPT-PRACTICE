@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart Quantity</title>
+  <style>
+    button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin: 4px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showQuantity()">Show Quantity</button>
+  <button onclick="updateCart(1)">Add To Cart</button>
+  <button onclick="updateCart(2)">+2</button>
+  <button onclick="updateCart(3)">+3</button>
+  <button onclick="updateCart(4)">+4</button>
+  <button onclick="updateCart(5)">+5</button>
+  <button onclick="updateCart(-1)">Remove From Cart</button>
+  <button onclick="updateCart(-2)">-2</button>
+  <button onclick="updateCart(-3)">-3</button>
+  <button onclick="updateCart(-4)">-4</button>
+  <button onclick="updateCart(-5)">-5</button>
+  <button onclick="resetCart()">Reset Cart</button>
+
+  <script>
+    let cartQuantity = 0;
+    const maxLimit = 10;
+
+    function updateCart(change) {
+      const newQuantity = cartQuantity + change;
+
+      if (newQuantity > maxLimit) {
+        alert("Cart is Full");
+        return;
+      }
+
+      if (newQuantity < 0) {
+        alert("Not Enough Quantity in the Cart");
+        return;
+      }
+
+      cartQuantity = newQuantity;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    }
+
+    function resetCart() {
+      cartQuantity = 0;
+      console.log("Cart Reset to 0");
+    }
+
+    function showQuantity() {
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    }
+  </script>
+
+</body>
+</html>

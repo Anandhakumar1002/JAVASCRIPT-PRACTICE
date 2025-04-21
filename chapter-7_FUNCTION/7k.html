@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7 Exercise k</title>
+    <style>
+        button{
+                background-color: black;
+                color: white;
+                border-color: black;
+                padding: 10px;
+                border-radius: 5px;
+            }
+    </style>
+</head>
+<body>
+    <button onclick="
+        console.log(cartQuantity);
+        ">Show Qauntity</button>
+    <button onclick="
+        updateCartQuantity(1);
+        ">Add To Cart</button>
+    <button onclick="
+        updateCartQuantity(2);
+        ">+2</button>
+    <button onclick="
+        updateCartQuantity(3);
+        ">+3</button>
+    <button onclick="
+        updateCartQuantity(4);
+        ">+4</button>
+    <button onclick="
+        updateCartQuantity(5);
+        ">+5</button>
+    <button onclick="
+        updateCartQuantity(-1);
+        ">Remove From Cart</button>
+    <button onclick="
+        updateCartQuantity(-2);
+        ">-2</button>
+    <button onclick="
+        updateCartQuantity(-3);
+        ">-3</button>
+    <button onclick="
+        updateCartQuantity(-4);
+        ">-4</button>
+    <button  onclick="
+        updateCartQuantity(-5);
+        ">-5</button>
+    <button onclick="
+        cartQuantity = 0;
+        console.log(cartQuantity)">Reset Cart</button>
+
+
+    <script>
+        let cartQuantity = 0;
+
+
+        function updateCartQuantity (change){
+            if(cartQuantity + change>10){
+                alert('Cart is Full');
+            }
+            else if(cartQuantity + change<0){
+                alert('Not Enough Quantity in the Cart');
+            }
+            else {
+                cartQuantity += change;
+                console.log(cartQuantity);
+            }
+            }
+        
+
+    </script>
+</body>
+</html>
